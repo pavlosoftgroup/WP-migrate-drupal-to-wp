@@ -141,7 +141,7 @@ function transference_options_page() {
 function transference_manage_page() {
 //	var_dump(  get_option( 'num_page' ) );
 //	$num_page = get_option( 'num_page' );
-	$num_page = isset( $_POST['num_page'] )?  $_POST['num_page'] : 1 ;
+	$num_page = isset( $_POST['num_page'] ) ? $_POST['num_page'] : 1;
 
 	echo "<h1>Transference Manage</h1>";
 
@@ -160,7 +160,7 @@ function transference_manage_page() {
 
 		if ( isset( $_POST['num_page'] ) ) {
 			$import_result = transferens_import_nodes( $_POST );
-			$num_page = (int)$num_page + 1;
+			$num_page      = (int) $num_page + 1;
 			update_option( 'num_page', $num_page );
 
 		}
@@ -219,7 +219,6 @@ function transference_manage_page() {
 				<?php
 				$i ++;
 			}
-
 		}
 
 		?>
